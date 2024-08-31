@@ -110,12 +110,8 @@
 .support-text ul li:hover span {
    color: #43cb53;
 }
-.support-text ul li:hover img {
-   -webkit-filter: invert(66%) sepia(10%) saturate(3018%) hue-rotate(76deg)
-      brightness(100%) contrast(86%);
-   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(invert=66, sepia=10, saturate=3018, brightness=100, contrast=86)";
-   filter: invert(66%) sepia(10%) saturate(3018%) hue-rotate(76deg)
-      brightness(100%) contrast(86%);
+.support-text ul li:hover svg {
+   fill: #43cb53;
 }
 .support-text ul li span {
    font-size: 1.1vw;
@@ -124,13 +120,14 @@
    -webkit-transition: color 0.3s;
    transition: color 0.3s;
 }
-.support-text ul li img {
+.support-text ul li svg {
+   fill: #1A1A1A;
    width: 1.1vw;
    margin-right: 0.8vw;
    -webkit-transition: -webkit-filter 0.3s;
    transition: -webkit-filter 0.3s;
-   transition: filter 0.3s;
-   transition: filter 0.3s, -webkit-filter 0.3s;
+   transition: fill 0.3s;
+   transition: fill 0.3s, -webkit-filter 0.3s;
 }
 .support-smartphone {
    position: absolute;
