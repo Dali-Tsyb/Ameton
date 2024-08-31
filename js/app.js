@@ -8,8 +8,8 @@ $(document).ready(function () {
       (isNaN(window.innerWidth) ? 0 : 0.017 * window.innerWidth);
 
    $(".button").click(function () {
-      $carousel.css("transform", "translateX(" + -$itemWidth + "px)");
       $carousel.css("-webkit-transform", "translateX(" + -$itemWidth + "px)");
+      $carousel.css("transform", "translateX(" + -$itemWidth + "px)");
       setTimeout(function () {
          $carousel.append($(".carousel li").first());
          $carousel.css("transition", "none");
