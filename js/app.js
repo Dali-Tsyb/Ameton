@@ -12,9 +12,12 @@ $(document).ready(function () {
       $carousel.css("transform", "translateX(" + -$itemWidth + "px)");
       setTimeout(function () {
          $carousel.append($(".carousel li").first());
+         $carousel.css("-webkit-transition", "none");
          $carousel.css("transition", "none");
+         $carousel.css("-webkit-transform", "translateX(0)");
          $carousel.css("transform", "translateX(0)");
          setTimeout(function () {
+            $carousel.css("-webkit-transition", "transform 0.5s ease-in-out");
             $carousel.css("transition", "transform 0.5s ease-in-out");
          }, 50);
       }, 500);
