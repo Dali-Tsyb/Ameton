@@ -26,6 +26,7 @@
    margin: 0;
    box-sizing: border-box;
    list-style: none;
+   text-decoration: none;
    font-family: MuseoSansCyrl, Arial, Helvetica, sans-serif;
    font-size: inherit;
    font-display: swap;
@@ -73,18 +74,18 @@
    color: #fff;
 }
 .support-text ul {
-   margin-top: 3.2vw;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
+   margin-top: 3.8vw;
+   text-align: center;
 }
 .support-text ul li {
    margin-left: 0.6vw;
-   padding: 1.3vw 0vw;
-   border-radius: 1vw;
-   -webkit-box-flex: 1;
-   -webkit-flex: 1 0 auto;
-   flex: 1;
+   display: inline-block;
+   cursor: pointer;
+}
+.support-text ul li:first-child {
+   margin-left: 0;
+}
+.support-text ul li a {
    display: -webkit-flex;
    display: -ms-flexbox;
    display: flex;
@@ -94,18 +95,35 @@
    -webkit-box-pack: center;
    -webkit-justify-content: center;
    justify-content: center;
-   font-size: 1.05vw;
+   padding: 1.3vw 0vw;
+   border-radius: 1vw;
+   width: 12vw;
+   height: fit-content;
+   background: #fff;
+}
+.support-text ul li:hover span {
+   color: #43cb53;
+}
+.support-text ul li:hover img {
+   -webkit-filter: invert(66%) sepia(10%) saturate(3018%) hue-rotate(76deg)
+      brightness(100%) contrast(86%);
+   filter: invert(66%) sepia(10%) saturate(3018%) hue-rotate(76deg)
+      brightness(100%) contrast(86%);
+}
+.support-text ul li span {
+   font-size: 1.1vw;
    font-weight: 700;
    color: black;
-   background: #fff;
-   cursor: pointer;
-}
-.support-text ul li:first-child {
-   margin-left: 0;
+   -webkit-transition: color 0.3s;
+   transition: color 0.3s;
 }
 .support-text ul li img {
    width: 1.1vw;
    margin-right: 0.8vw;
+   -webkit-transition: -webkit-filter 0.3s;
+   transition: -webkit-filter 0.3s;
+   transition: filter 0.3s;
+   transition: filter 0.3s, -webkit-filter 0.3s;
 }
 .support-smartphone {
    width: 21vw;
@@ -134,14 +152,6 @@
    background: #fff;
    box-shadow: 0px 20px 60px 0px #1a1a1a0d;
    border-radius: 3vw;
-}
-.socials-text {
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   flex-direction: column;
 }
 .socials h2 {
    font-size: 1.1vw;
@@ -172,6 +182,9 @@
    margin-left: 0.9vw;
    cursor: pointer;
 }
+.socials ul li:hover img {
+   opacity: 0.7;
+}
 .socials ul > :nth-child(1) {
    padding: 1.2vw;
    margin-left: 0;
@@ -194,6 +207,8 @@
    height: 100%;
    -webkit-transform: translateY(0.15vw);
    transform: translateY(0.15vw);
+   -webkit-transition: opacity 0.3s;
+   transition: opacity 0.3s;
 }
 /* FAQ */
 .faq h2 {
@@ -229,24 +244,24 @@
    box-shadow: 0px 0px 30px 0px #0000000d;
    border-radius: 1.7vw;
    margin-left: 1.7vw;
+   cursor: pointer;
 }
 .faq .carousel li:first-child {
    margin-left: 0;
 }
+.faq .carousel li:hover h3 {
+   color: #43cb53;
+}
 .faq-carousel-text {
    padding: 1.5vw 1.2vw;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   flex-direction: column;
 }
 .faq-carousel-text h3 {
    font-size: 1.5vw;
    font-weight: 700;
    line-height: 1.9vw;
    margin-bottom: 0.5vw;
+   -webkit-transition: color 0.3s;
+   transition: color 0.3s;
 }
 .faq-carousel-text p {
    font-size: 1.15vw;
@@ -301,12 +316,6 @@
 }
 .help ul {
    margin: 2.4vw 8vw 2.2vw 8vw;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   flex-direction: column;
 }
 .help ul li {
    padding: 1.7vw 1.8vw;
@@ -325,19 +334,18 @@
    margin-bottom: 0.8vw;
    cursor: pointer;
 }
+.help ul li:hover h3 {
+   color: #43cb53;
+}
 .help-text {
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   flex-direction: column;
    width: 40%;
 }
 .help-text h3 {
    font-size: 1.59vw;
    font-weight: 700;
    margin-bottom: 0.2vw;
+   -webkit-transition: color 0.3s;
+   transition: color 0.3s;
 }
 .help-text p {
    font-size: 0.96vw;
@@ -375,15 +383,6 @@
    }
    .support-text {
       z-index: 1;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      align-items: center;
       text-align: center;
    }
    .support-text h1 {
@@ -394,20 +393,24 @@
       font-size: 2.7vw;
       line-height: 4.5vw;
    }
-   .support ul {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      flex-direction: column;
-   }
    .support ul li {
-      width: 27vw;
-      padding: 1.84vw 0;
-      border-radius: 1.5vw;
+      width: fit-content;
+      display: block;
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: fit-content;
       margin-left: 0;
       margin-bottom: 2.2vw;
    }
    .support ul li:last-child {
       margin-bottom: 0;
+   }
+   .support ul li a {
+      width: 28vw;
+      padding: 1.84vw 0;
+      border-radius: 1.5vw;
    }
    .support ul li span {
       font-size: 2.5vw;
@@ -534,6 +537,7 @@
    .help ul li {
       border-radius: 4.5vw;
       padding: 5vw 6vw;
+      margin-bottom: 2.5vw;
    }
    .help-text {
       width: 85%;

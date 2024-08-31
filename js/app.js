@@ -1,9 +1,9 @@
 // CAROUSEL
 
 $(document).ready(function () {
-   let $carousel = $(".carousel");
-   let $items = $(".carousel li");
-   let $itemWidth =
+   var $carousel = $(".carousel");
+   var $items = $(".carousel li");
+   var $itemWidth =
       $items.first().outerWidth(true) +
       (isNaN(window.innerWidth) ? 0 : 0.017 * window.innerWidth);
 
