@@ -126,50 +126,46 @@
    cursor: pointer;
 }
 .socials ul > :nth-child(1) {
-   padding: 0 1.2vw;
+   padding: 1.2vw;
 }
 .socials ul > :nth-child(2) {
    padding: 1.5vw;
 }
 .socials ul > :nth-child(3),
 .socials ul > :nth-child(4) {
-   padding: 0 1.4vw;
+   padding: 1.4vw;
 }
 .socials ul > :nth-child(5) {
-   padding: 0 1.1vw;
+   padding: 1.1vw;
 }
 .socials ul > :nth-child(6) {
-   padding: 0 1.8vw;
+   padding: 1.8vw;
 }
 .socials ul li img {
    width: 100%;
    height: 100%;
    transform: translateY(0.15vw);
 }
-.socials ul > :nth-child(1) img {
-   transform: translateY(0);
-}
-
 /* FAQ */
 .faq h2 {
    font-size: 3vw;
    text-align: center;
 }
-.container {
+.faq .container {
    position: relative;
    width: 100%;
    overflow: hidden;
-   padding: 30px;
+   padding: 30px 0;
 }
-.carousel {
-   margin-top: 0.5vw;
+.faq .carousel {
+   margin: 0.5vw 3vw 0 3vw;
    height: 100%;
    width: 100vw;
    display: flex;
    gap: 1.7vw;
    transition: transform 0.5s ease-in-out;
 }
-.carousel li {
+.faq .carousel li {
    top: 0;
    left: 0;
    width: 22%;
@@ -195,11 +191,11 @@
    font-weight: 300;
    line-height: 1.6vw;
 }
-.carousel li img {
+.faq .carousel li img {
    width: 8vw;
    align-self: center;
 }
-.button {
+.faq .button {
    position: absolute;
    top: 50%;
    right: 0;
@@ -215,7 +211,7 @@
    padding: 1.25vw 0;
    cursor: pointer;
 }
-.button img {
+.faq .button img {
    width: 100%;
    height: 100%;
 }
@@ -265,4 +261,188 @@
 .help ul li img {
    opacity: 0.5;
    width: 0.5vw;
+}
+
+@media (width < 580px) {
+   /* SUPPORT */
+   .support {
+      position: relative;
+      border-radius: 4.5vw;
+      padding: 4vw 0;
+      margin: 4vw;
+   }
+   .support-planes {
+      z-index: 0;
+      position: absolute;
+      bottom: 9vw;
+      left: 0;
+      width: 37vw;
+   }
+   .support-smartphone {
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 34vw;
+   }
+   .support-text {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+   .support-text h1 {
+      font-size: 5.9vw;
+   }
+   .support-text p {
+      margin: 1.5vw 8vw 2vw 8vw;
+      font-size: 2.7vw;
+      line-height: 4.5vw;
+   }
+   .support ul {
+      flex-direction: column;
+      gap: 2.2vw;
+   }
+   .support ul li {
+      gap: 2vw;
+      width: 27vw;
+      padding: 1.84vw 0;
+      border-radius: 1.5vw;
+   }
+   .support ul li span {
+      font-size: 2.5vw;
+   }
+   .support ul li img {
+      width: 2.2vw;
+   }
+
+   /*SOCIALS*/
+   .socials {
+      flex-direction: column;
+      text-align: center;
+      border-radius: 4.5vw;
+      margin: 6vw 4vw 8vw 4vw;
+      padding: 5vw 3vw;
+      gap: 4vw;
+   }
+   .socials-text {
+      gap: 2vw;
+   }
+   .socials-text h2 {
+      font-size: 4.5vw;
+   }
+   .socials-text p {
+      font-size: 2.6vw;
+   }
+   .socials ul {
+      gap: 3vw;
+   }
+   .socials ul li {
+      width: 8vw;
+      height: 8vw;
+   }
+   .socials ul > :nth-child(1) {
+      padding: 1.4vw;
+   }
+   .socials ul > :nth-child(2) {
+      padding: 1.9vw;
+   }
+   .socials ul > :nth-child(2) img {
+      transform: translateY(0.5vw);
+   }
+   .socials ul > :nth-child(3) {
+      padding: 2.2vw;
+   }
+   .socials ul > :nth-child(3) img {
+      transform: translateY(0.5vw);
+   }
+   .socials ul > :nth-child(4) {
+      padding: 1.9vw;
+   }
+   .socials ul > :nth-child(5) {
+      padding: 1.5vw;
+   }
+   .socials ul > :nth-child(5) img {
+      transform: translateY(0.8vw);
+   }
+   .socials ul > :nth-child(6) {
+      padding: 3vw;
+   }
+   .socials ul > :nth-child(6) img {
+      transform: translateY(0.5vw);
+   }
+
+   /*FAQ*/
+   .faq {
+      border-radius: 4.5vw;
+   }
+   .faq h2 {
+      font-size: 4.5vw;
+   }
+   .faq .container {
+      margin-top: -3vw;
+      gap: 4vw;
+   }
+   .faq .carousel {
+      margin: 0 4vw;
+   }
+   .faq .carousel li {
+      width: 80%;
+      border-radius: 4.5vw;
+      padding: 0 3vw 0 0;
+      justify-content: space-between;
+   }
+   .faq-carousel-text {
+      padding: 5vw;
+   }
+   .faq-carousel-text h3 {
+      font-size: 3.5vw;
+      line-height: 4.5vw;
+   }
+   .faq-carousel-text p {
+      font-size: 2.5vw;
+      line-height: 4.5vw;
+   }
+   .faq .carousel li img {
+      width: 20vw;
+   }
+   .faq .button {
+      width: 8vw;
+      height: 8vw;
+      padding: 2.5vw;
+      right: 1.5vw;
+   }
+
+   /*HELP*/
+   .help {
+      margin: 0vw 4vw 15vw 4vw;
+      border-radius: 4.5vw;
+   }
+   .help h2 {
+      font-size: 4.5vw;
+   }
+   .help ul {
+      gap: 4vw;
+      margin: 7vw 0 0 0;
+   }
+   .help ul li {
+      border-radius: 4.5vw;
+      padding: 5vw 6vw;
+   }
+   .help-text {
+      width: 85%;
+      gap: 2vw;
+   }
+   .help-text h3 {
+      font-size: 3.5vw;
+      line-height: 4.5vw;
+   }
+   .help-text p {
+      font-size: 2.5vw;
+      line-height: 4.5vw;
+   }
+   .help ul li img {
+      width: 1.5vw;
+   }
 }
